@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="56b9aa25-8cc6-49d9-a6ca-f98f91d5e425" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article/controllers/ArticleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/article/controllers/ArticleController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article/models/ArticleModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/article/models/ArticleModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article/routes/ArticleRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/article/routes/ArticleRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +63,13 @@
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\mamadou.baradji\\Downloads\\apicafthe\\apicafthe\\node_modules\\prettier",
     "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -84,7 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1769504954264</updated>
       <workItem from="1769504955265" duration="802000" />
-      <workItem from="1769507992725" duration="905000" />
+      <workItem from="1769507992725" duration="18601000" />
     </task>
     <servers />
   </component>
