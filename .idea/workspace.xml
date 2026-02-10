@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56b9aa25-8cc6-49d9-a6ca-f98f91d5e425" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/img1.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.exemple" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/article/controllers/ArticleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/article/controllers/ArticleController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/article/models/ArticleModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/article/models/ArticleModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/article/routes/ArticleRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/article/routes/ArticleRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/controllers/ClientController.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/controllers/ClientController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/models/ClientModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/ClientModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/routes/ClientRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/ClientRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/authMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/authMiddleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +99,7 @@
       <workItem from="1770365626244" duration="11954000" />
       <workItem from="1770625872475" duration="2324000" />
       <workItem from="1770650161654" duration="1862000" />
-      <workItem from="1770709719272" duration="4247000" />
+      <workItem from="1770709719272" duration="5127000" />
     </task>
     <servers />
   </component>

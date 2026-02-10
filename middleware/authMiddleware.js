@@ -1,66 +1,34 @@
-//Vérification du token
-//Middleware d'authentification JWT-authMiddleware.js
-// Vérifie que le token JWT est valide pour protéger les routes
-
 const jwt = require("jsonwebtoken");
 
-//Vérification du token
 const verifyToken = (req, res, next) => {
-  const verifyToken = (req, res, next) => {
-    // Cherche le token dans le cookie HttpOnly
-    let token = req.cookies && req.cookies.token;
+  // 1. Récupération du token (Cookie ou Header Authorization)
+  let token = req.cookies && req.cookies.token;
 
-    // header Authorization
-    if (!token) {
-      const authHeader = req.headers["authorization"];
-
-      if (!authHeader) {
-        return res.status(403).json({ message: "Token manquant" });
-      }
-
+  if (!token) {
+    const authHeader = req.headers["authorization"];
+    if (authHeader) {
       const parts = authHeader.split(" ");
-
-      if (parts.length !== 2 || parts[0] !== "Bearer") {
-        return res.status(403).json({ message: "Format de token invalide" });
+      if (parts.length === 2 && parts[0] === "Bearer") {
+        token = parts[1];
       }
-
-      token = parts[1];
     }
-    //Vérifie le token
-    jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
-      if (err) {
-        if (err.name === "TokenExpiredError") {
-          return res.status(401).json({
-            message: "Token expiré",
-          });
-        }
-        return res.status(401).json({
-          message: "Token invalide",
-        });
-      }
+  }
 
-      // Token valide : on ajoute les infos du client à la requête
-      req.client = decoded;
-      next();
-    });
-  };
+  // 2. Si aucun token n'est trouvé après les deux vérifications
+  if (!token) {
+    return res.status(403).json({ message: "Token manquant" });
+  }
 
-  module.exports = { verifyToken };
-
-  //Vérifie le token
+  // 3. Vérification du token avec JWT
   jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
     if (err) {
       if (err.name === "TokenExpiredError") {
-        return res.status(401).json({
-          message: "Token expiré",
-        });
+        return res.status(401).json({ message: "Token expiré" });
       }
-      return res.status(401).json({
-        message: "Token invalide",
-      });
+      return res.status(401).json({ message: "Token invalide" });
     }
 
-    // Token valide : on ajoute les infos du client à la requête
+    // 4. Succès : on injecte les données décodées dans req.client pour les routes suivantes
     req.client = decoded;
     next();
   });
