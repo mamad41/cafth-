@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56b9aa25-8cc6-49d9-a6ca-f98f91d5e425" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/img1.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.exemple" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article/controllers/ArticleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/article/controllers/ArticleController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article/models/ArticleModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/article/models/ArticleModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article/routes/ArticleRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/article/routes/ArticleRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/controllers/ClientController.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/controllers/ClientController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/models/ClientModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/ClientModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/routes/ClientRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/ClientRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/authMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/authMiddleware.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
@@ -43,35 +51,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "main",
-    "javascript.nodejs.core.library.configured.version": "24.13.0",
-    "javascript.nodejs.core.library.typings.version": "24.10.9",
-    "javascript.preferred.runtime.type.id": "node",
-    "last_opened_file_path": "C:/Users/mamadou.baradji/Downloads/apicafthe/apicafthe",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\mamadou.baradji\\Downloads\\apicafthe\\apicafthe\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;24.13.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;24.10.9&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mamadou.baradji/Desktop/Projet_CafThé/apicafthe&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\mamadou.baradji\\Desktop\\Projet_CafThé\\apicafthe\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2025.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/order" />
@@ -79,6 +87,7 @@
       <recent name="$PROJECT_DIR$/client" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mamadou.baradji\Desktop\Projet_CafThé\apicafthe\public\image" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -97,7 +106,14 @@
       <option name="presentableId" value="Default" />
       <updated>1769504954264</updated>
       <workItem from="1769504955265" duration="802000" />
-      <workItem from="1769507992725" duration="18601000" />
+      <workItem from="1769507992725" duration="23246000" />
+      <workItem from="1769760836408" duration="16470000" />
+      <workItem from="1769779397064" duration="9005000" />
+      <workItem from="1770199810020" duration="58000" />
+      <workItem from="1770365626244" duration="11954000" />
+      <workItem from="1770625872475" duration="2324000" />
+      <workItem from="1770650161654" duration="1862000" />
+      <workItem from="1770709719272" duration="4247000" />
     </task>
     <servers />
   </component>

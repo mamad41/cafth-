@@ -17,6 +17,11 @@ const getArticleById = async (id) => {
   );
   return rows;
 };
-//Recuperer un articl par soa categorie
-
-module.exports = { getAllArticles, getArticleById };
+//Recuperer un article par sa categorie
+const getModelCategory = async (categorie) => {
+  const [rows] = await db.query("SELECT * FROM produit WHERE categorie = ?", [
+    categorie,
+  ]);
+  return rows;
+};
+module.exports = { getAllArticles, getArticleById, getModelCategory };

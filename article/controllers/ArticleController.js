@@ -1,5 +1,9 @@
 //Controlleur Articles
-const { getAllArticles, getArticleById } = require("../models/ArticleModel");
+const {
+  getAllArticles,
+  getArticleById,
+  getModelCategory,
+} = require("../models/ArticleModel");
 
 //Récupérer tous les Articles
 const getAll = async (req, res) => {
@@ -43,4 +47,22 @@ const getById = async (req, res) => {
     });
   }
 };
-module.exports = { getAll, getById };
+//Récupérer par categorie
+const getByCategory = async (req, res) => {
+  try {
+    const { categorie } = req.params;
+    const articles = await getModelCategory(categorie);
+
+    res.json({
+      message: `Articles de la categorie ${categorie}`,
+      count: articles.length,
+      articles,
+    });
+  } catch (error) {
+    console.error("erreur de récupération des articles", error.message);
+    res.status(500).json({
+      message: "Erreur de récupération des articles",
+    });
+  }
+};
+module.exports = { getAll, getById, getByCategory };
