@@ -11,6 +11,7 @@ const db = require("./db");
 //Importation des routes
 const articleRoutes = require("./article/routes/ArticleRouter");
 const clientRoutes = require("./client/routes/ClientRouter");
+const paymentRoutes = require("./Payment/Routes/PaymentRouter");
 //Creation de l'application Express
 const app = express();
 
@@ -52,6 +53,7 @@ app.get("/health", (req, res) => {
 //Route de l'api
 app.use("/api/articles", articleRoutes);
 app.use("/api/client", clientRoutes);
+app.use("/api/payment", paymentRoutes);
 
 //Gestion des erreurs
 

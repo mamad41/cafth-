@@ -125,7 +125,6 @@ const logout = (req, res) => {
 //Si le token est valide, on retourne les infos du client
 const getMe = async (req, res) => {
   try {
-    // req.client.id vient du JWT decode par le middleware verifyToken
     const clients = await findClientById(req.client.id);
 
     if (clients.length === 0) {
@@ -134,12 +133,16 @@ const getMe = async (req, res) => {
 
     const client = clients[0];
 
+    // Renvoie TOUTES les infos nécessaires pour l'Espace Client
     res.json({
       client: {
         id: client.code_client,
         nom: client.nom,
         prenom: client.prenom,
         email: client.email,
+        telephone: client.telephone, // Assure-toi que cette colonne existe
+        points_fidelite: client.points_fidelite || 0, // Optionnel
+        date_inscription: client.date_inscription, // Optionnel
       },
     });
   } catch (error) {
