@@ -12,6 +12,7 @@ const db = require("./db");
 const articleRoutes = require("./article/routes/ArticleRouter");
 const clientRoutes = require("./client/routes/ClientRouter");
 const paymentRoutes = require("./Payment/Routes/PaymentRouter");
+const orderRoutes = require("./order/routes/OrderRouter");
 //Creation de l'application Express
 const app = express();
 
@@ -54,6 +55,7 @@ app.get("/health", (req, res) => {
 app.use("/api/articles", articleRoutes);
 app.use("/api/client", clientRoutes);
 app.use("/api/payment", paymentRoutes);
+app.use("/api/orders", orderRoutes);
 
 //Gestion des erreurs
 
