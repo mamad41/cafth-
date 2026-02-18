@@ -13,6 +13,7 @@ const articleRoutes = require("./article/routes/ArticleRouter");
 const clientRoutes = require("./client/routes/ClientRouter");
 const paymentRoutes = require("./Payment/Routes/PaymentRouter");
 const orderRoutes = require("./order/routes/OrderRouter");
+const abonnementRoutes = require("./abonnement/routes/AbonnementRouter");
 //Creation de l'application Express
 const app = express();
 
@@ -56,6 +57,7 @@ app.use("/api/articles", articleRoutes);
 app.use("/api/client", clientRoutes);
 app.use("/api/payment", paymentRoutes);
 app.use("/api/orders", orderRoutes);
+app.use("/api/abonnements", abonnementRoutes);
 
 //Gestion des erreurs
 
