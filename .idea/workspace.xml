@@ -5,26 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56b9aa25-8cc6-49d9-a6ca-f98f91d5e425" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/image/Cafthe-arabica-vf.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/Cafthe-blue-moun-vf.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/Cafthe-breakf-vf.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/Cafthe-cafetiere-vf.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/Cafthe-coffret-1-vf.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/Cafthe-dukale-vf.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/Cafthe-early-vf.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/Cafthe-el-mor-vrac-vf.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/Cafthe-izu-vrac-vf.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/Cafthe-jade-vf.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/Cafthe-papier-vf.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/Cafthe-robusta-vf.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/Cafthe-rooibos-vf.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/Cafthe-taba-vf.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/Cafthe-theiere-vf.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/Cafthé-the-noir-izu-vf.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/blue_mountain.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/105971e2-83fc-469e-a024-bf360cf0168a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/105971e2-83fc-469e-a024-bf360cf0168a.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/Cafthe-coffret-matinal.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/Cafthe-deca.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/Cafthe-mix-vf.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/Cafthé-coffret-prestige.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/Cafthé_the_vert.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/cafthe-the-sombre-vf.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/img1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/blue_mountain.webp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +55,7 @@
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;24.13.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;24.10.9&quot;,
     &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mamadou.baradji/Desktop/Projet_CafThé/apicafthe&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mamadou.baradji/Desktop/Projet_CafThé/apicafthe/public/image&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -86,6 +75,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mamadou.baradji\Desktop\Projet_CafThé\apicafthe\public\image" />
       <recent name="$PROJECT_DIR$/order" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/client" />
@@ -123,7 +113,8 @@
       <workItem from="1770709719272" duration="20627000" />
       <workItem from="1770797475429" duration="1259000" />
       <workItem from="1770884671565" duration="6217000" />
-      <workItem from="1771230148830" duration="27083000" />
+      <workItem from="1771230148830" duration="31599000" />
+      <workItem from="1771856045463" duration="1885000" />
     </task>
     <servers />
   </component>
