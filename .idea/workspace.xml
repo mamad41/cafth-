@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56b9aa25-8cc6-49d9-a6ca-f98f91d5e425" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/image/Cafthe-coffret-matinal.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/Cafthe-deca.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/Cafthe-mix-vf.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/Cafthé-coffret-prestige.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/Cafthé_the_vert.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/cafthe-the-sombre-vf.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/blue_mountain.webp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +106,7 @@
       <workItem from="1770797475429" duration="1259000" />
       <workItem from="1770884671565" duration="6217000" />
       <workItem from="1771230148830" duration="31599000" />
-      <workItem from="1771856045463" duration="1885000" />
+      <workItem from="1771856045463" duration="5479000" />
     </task>
     <servers />
   </component>
