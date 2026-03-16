@@ -1,4 +1,8 @@
 require("dotenv").config();
+console.log(
+  "Ma clé Stripe est :",
+  process.env.STRIPE_SECRET_KEY ? "Détectée" : "VIDE",
+);
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
