@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { getHistoryByClientId } = require("../Controllers/OrderController");
+const { getHistoryByClientId } = require("../controllers/OrderController");
 const { verifyToken } = require("../../middleware/authMiddleware");
 
 // Route pour récupérer l'historique des commandes d'un client spécifique
