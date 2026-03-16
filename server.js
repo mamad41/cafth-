@@ -20,7 +20,9 @@ app.use(express.static("public"));
 
 app.use(
   cors({
-    origin: ["http://localhost:4173", "Reactjs-Cafthe.mbaradji.dev-campus.fr"],
+    origin:
+      process.env.FRONTEND_URL ||
+      "http://Reactjs-Cafthe.mbaradji.dev-campus.fr",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }),
