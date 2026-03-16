@@ -1,4 +1,4 @@
-// permet de configurern le pool de connexion a MySQL
+// permet de configurer le pool de connexion a MySQL
 //pour faire des requêtes asyncrones async/await
 
 const mysql = require("mysql2/promise");

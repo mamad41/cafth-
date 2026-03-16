@@ -1,9 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const { getHistory } = require("../Controllers/OrderController");
+const { getHistoryByClientId } = require("../Controllers/OrderController");
 const { verifyToken } = require("../../middleware/authMiddleware");
 
-// Route pour l'historique : GET /api/orders/history
-router.get("/history", verifyToken, getHistory);
+// Route pour récupérer l'historique des commandes d'un client spécifique
+// GET /api/orders/client/:idClient
+router.get("/client/:idClient", verifyToken, getHistoryByClientId);
 
 module.exports = router;

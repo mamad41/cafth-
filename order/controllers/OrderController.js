@@ -1,25 +1,37 @@
-const db = require("../../db"); // Ton fichier de connexion à la base
+const OrderModel = require("../models/OrderModel");
 
-const getHistory = async (req, res) => {
+/**
+ * Récupère l'historique des commandes d'un client spécifique.
+ * Vérifie que l'utilisateur authentifié a le droit de consulter ces commandes.
+ * @param {object} req - La requête Express avec les paramètres et l'utilisateur authentifié.
+ * @param {object} res - La réponse Express.
+ */
+const getHistoryByClientId = async (req, res) => {
   try {
-    // 1. On récupère l'ID du client depuis le middleware verifyToken
-    const clientId = req.client.id;
+    // 1. Récupérer l'ID du client depuis les paramètres de l'URL
+    const clientId = parseInt(req.params.idClient, 10);
 
-    // 2. Requête SQL pour récupérer les commandes du client
-    // On utilise les noms de colonnes vus dans ta structure phpMyAdmin
-    const [orders] = await db.execute(
-      "SELECT * FROM commande WHERE code_client = ? ORDER BY date_commande DESC",
-      [clientId],
-    );
+    // 2. Vérifier l'autorisation : l'ID du client dans le JWT doit correspondre à l'ID demandé
+    if (req.client.id !== clientId) {
+      return res.status(403).json({
+        message: "Accès interdit : vous n'êtes pas autorisé à consulter ces commandes.",
+      });
+    }
 
-    // 3. Renvoi des données au Frontend
-    res.json(orders);
+    // 3. Récupérer l'historique des commandes depuis le modèle
+    const commandes = await OrderModel.getOrderHistoryByClientId(clientId);
+
+    // 4. Formater la réponse dans la structure attendue
+    res.status(200).json({ commandes });
   } catch (error) {
-    console.error("Erreur historique commandes:", error.message);
+    console.error("Erreur lors de la récupération de l'historique des commandes :", error);
     res.status(500).json({
-      message: "Impossible de récupérer l'historique des commandes",
+      message: "Erreur serveur : impossible de récupérer l'historique des commandes.",
+      error: error.message,
     });
   }
 };
 
-module.exports = { getHistory };
+module.exports = {
+  getHistoryByClientId,
+};
