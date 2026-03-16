@@ -19,13 +19,24 @@ app.use(express.json());
 app.use(morgan("dev"));
 app.use(express.static("public"));
 
+// Configuration CORS dynamique et très tolérante
 app.use(
   cors({
-    origin:
-      process.env.FRONTEND_URL ||
-      "https://Reactjs-Cafthe.mbaradji.dev-campus.fr",
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: function (origin, callback) {
+      // Autoriser les requêtes sans origine (comme Postman ou curl)
+      if (!origin) return callback(null, true);
+      
+      // On accepte l'origine si elle vient de votre domaine dev-campus.fr
+      if (origin.includes("mbaradji.dev-campus.fr") || origin.includes("localhost")) {
+        return callback(null, true);
+      }
+      
+      // Sinon on bloque
+      return callback(new Error("CORS policy violation"), false);
+    },
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With", "Accept"],
   }),
 );
 
@@ -41,7 +52,7 @@ app.get("/health", (req, res) => {
 app.use("/api/articles", articleRoutes);
 app.use("/api/client", clientRoutes);
 app.use("/api/payment", paymentRoutes);
-app.use("/api/commandes", orderRoutes); // <-- Changé de /api/orders à /api/commandes
+app.use("/api/commandes", orderRoutes);
 app.use("/api/abonnements", abonnementRoutes);
 
 app.use((req, res) => {
