@@ -8,7 +8,7 @@ const db = require("./db");
 
 const articleRoutes = require("./article/routes/ArticleRouter");
 const clientRoutes = require("./client/routes/ClientRouter");
-const paymentRoutes = require("./Payment/routes/PaymentRouter");
+const paymentRoutes = require("./Payment/Routes/PaymentRouter");
 const orderRoutes = require("./order/routes/OrderRouter");
 const abonnementRoutes = require("./abonnement/Routes/AbonnementRouter");
 
