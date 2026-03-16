@@ -22,7 +22,7 @@ app.use(
   cors({
     origin:
       process.env.FRONTEND_URL ||
-      "http://Reactjs-Cafthe.mbaradji.dev-campus.fr",
+      "https://Reactjs-Cafthe.mbaradji.dev-campus.fr",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }),
