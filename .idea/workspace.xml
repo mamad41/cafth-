@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="56b9aa25-8cc6-49d9-a6ca-f98f91d5e425" name="Changes" comment="mise a jour">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +120,7 @@
       <workItem from="1773168092712" duration="596000" />
       <workItem from="1773181464415" duration="629000" />
       <workItem from="1773319582047" duration="1716000" />
-      <workItem from="1773324318424" duration="14518000" />
+      <workItem from="1773324318424" duration="15766000" />
     </task>
     <task id="LOCAL-00001" summary="mise a jour">
       <option name="closed" value="true" />
