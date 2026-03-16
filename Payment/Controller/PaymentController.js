@@ -1,11 +1,23 @@
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const OrderModel = require("../../order/models/OrderModel");
+
+//  On initialise Stripe dans une petite fonction "getter"
+const getStripe = () => {
+  if (!process.env.STRIPE_SECRET_KEY) {
+    throw new Error(
+      "Clé secrète Stripe manquante dans les variables d'environnement.",
+    );
+  }
+  return require("stripe")(process.env.STRIPE_SECRET_KEY);
+};
 
 const createCheckoutSession = async (req, res) => {
   try {
-    const { cartItems, totalAmount, shippingAddress } = req.body; // shippingAddress est reçu du front, mais non utilisé ici pour l'instant
+    const { cartItems, totalAmount, shippingAddress } = req.body;
 
-    // 1. Vérification de l'utilisateur (on vérifie req.client OU req.user selon ton middleware)
+    // Initialisation de Stripe au moment de l'appel
+    const stripe = getStripe();
+
+    // 1. Vérification de l'utilisateur
     const currentUser = req.client || req.user;
 
     if (!currentUser || !currentUser.id) {
@@ -15,17 +27,14 @@ const createCheckoutSession = async (req, res) => {
     }
 
     // 2. ENREGISTREMENT EN BASE DE DONNÉES
-    // Appel de createOrder avec les 3 arguments attendus par OrderModel.js
     const orderId = await OrderModel.createOrder(
       currentUser.id,
       totalAmount,
       cartItems,
-      // shippingAddress n'est pas passé ici car la table 'commande' ne le gère pas directement
     );
 
     // 3. PRÉPARATION DES ARTICLES POUR STRIPE
     const line_items = cartItems.map((item) => {
-      // Sécurité : on s'assure d'avoir un prix valide (nom de variable identique au Front)
       const unitPrice = parseFloat(item.prix_final || item.prix_ttc || 0);
 
       return {
@@ -34,10 +43,10 @@ const createCheckoutSession = async (req, res) => {
           product_data: {
             name: item.nom_produit || item.nom || "Article CafThé",
             metadata: {
-              sku: item.reference_sku, // On lie le SKU ici aussi pour Stripe
+              sku: item.reference_sku,
             },
           },
-          unit_amount: Math.round(unitPrice * 100),
+          unit_amount: Math.round(unitPrice * 100), // Stripe attend des centimes
         },
         quantity: item.quantite,
       };
