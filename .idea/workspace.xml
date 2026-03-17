@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56b9aa25-8cc6-49d9-a6ca-f98f91d5e425" name="Changes" comment="mise a jour">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/105971e2-83fc-469e-a024-bf360cf0168a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/105971e2-83fc-469e-a024-bf360cf0168a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
@@ -128,7 +127,8 @@
       <workItem from="1773181464415" duration="629000" />
       <workItem from="1773319582047" duration="1716000" />
       <workItem from="1773324318424" duration="20626000" />
-      <workItem from="1773679304352" duration="5097000" />
+      <workItem from="1773679304352" duration="5948000" />
+      <workItem from="1773753326649" duration="2540000" />
     </task>
     <task id="LOCAL-00001" summary="mise a jour">
       <option name="closed" value="true" />
@@ -202,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773675637453</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="mise a jour">
+      <option name="closed" value="true" />
+      <created>1773690355777</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1773690355777</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

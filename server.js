@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config({ path: __dirname + "/.env" });
 
 const express = require("express");
 const cors = require("cors");
@@ -25,18 +25,26 @@ app.use(
     origin: function (origin, callback) {
       // Autoriser les requêtes sans origine (comme Postman ou curl)
       if (!origin) return callback(null, true);
-      
+
       // On accepte l'origine si elle vient de votre domaine dev-campus.fr
-      if (origin.includes("mbaradji.dev-campus.fr") || origin.includes("localhost")) {
+      if (
+        origin.includes("mbaradji.dev-campus.fr") ||
+        origin.includes("localhost")
+      ) {
         return callback(null, true);
       }
-      
+
       // Sinon on bloque
       return callback(new Error("CORS policy violation"), false);
     },
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
-    allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With", "Accept"],
+    allowedHeaders: [
+      "Content-Type",
+      "Authorization",
+      "X-Requested-With",
+      "Accept",
+    ],
   }),
 );
 
