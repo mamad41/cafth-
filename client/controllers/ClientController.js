@@ -86,8 +86,8 @@ const login = async (req, res) => {
     //On place le token dens un cookie HttpOnly
     res.cookie("token", token, {
       httpOnly: true,
-      secure: false, // Mettre sur true en HTTP
-      sameSite: "lax",
+      secure: true, // ✅ CORRIGÉ : Doit être true pour HTTPS
+      sameSite: "lax", // 'lax' est un bon compromis. 'strict' peut poser problème avec les redirections.
       maxAge: expire * 1000,
     });
 
@@ -113,9 +113,8 @@ const login = async (req, res) => {
 const logout = (req, res) => {
   res.clearCookie("token", {
     httpOnly: true,
-    secure: false,
+    secure: true, // ✅ CORRIGÉ : Doit être true pour HTTPS
     sameSite: "lax",
-    maxAge: expire * 1000,
   });
   res.json({ message: "Déconnexion réussie" });
 };
