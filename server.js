@@ -19,34 +19,20 @@ app.use(express.json());
 app.use(morgan("dev"));
 app.use(express.static("public"));
 
-// Configuration CORS dynamique et très tolérante
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      // Autoriser les requêtes sans origine (comme Postman ou curl)
-      if (!origin) return callback(null, true);
+// ── En haut de server.js, avant toute autre route ──
+app.use(cors({
+  origin: [
+    'https://reactjs-cafthe.mbaradji.dev-campus.fr',
+    'http://localhost:3000'     // dev local
+  ],
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
 
-      // On accepte l'origine si elle vient de votre domaine dev-campus.fr
-      if (
-        origin.includes("mbaradji.dev-campus.fr") ||
-        origin.includes("localhost")
-      ) {
-        return callback(null, true);
-      }
+// Répond au preflight OPTIONS avant d'atteindre les routes
+app.options('*', cors());
 
-      // Sinon on bloque
-      return callback(new Error("CORS policy violation"), false);
-    },
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    credentials: true,
-    allowedHeaders: [
-      "Content-Type",
-      "Authorization",
-      "X-Requested-With",
-      "Accept",
-    ],
-  }),
-);
 
 app.use(cookieParser());
 

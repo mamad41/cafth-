@@ -7,26 +7,36 @@ const {
   findClientById,
 } = require("../models/ClientModel");
 const jwt = require("jsonwebtoken");
+const { validationResult } = require("express-validator");
 
 // Inscription
-
 const register = async (req, res) => {
+  // 1. Vérifier le résultat de la validation
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({
+      message: "Erreur de validation des données.",
+      errors: errors.array(),
+    });
+  }
+
   try {
+    // Les données ont été nettoyées par express-validator (trim, escape, normalizeEmail)
     const { nom, prenom, email, mots_de_passe } = req.body;
 
-    //vérifie si l'email existe deja
+    // 2. vérifier si l'email existe deja
     const existingClient = await findClientByEmail(email);
 
     if (existingClient.length > 0) {
-      return res.status(400).json({
-        message: "Client existe deja!",
+      return res.status(409).json({ // 409 Conflict est plus approprié ici
+        message: "Un compte avec cette adresse email existe déjà.",
       });
     }
 
-    //Hacher le mot de passe
+    // 3. Hacher le mot de passe
     const hash = await hashPassword(mots_de_passe);
 
-    // Crée le client
+    // 4. Crée le client
     const result = await createClient({
       nom,
       prenom,
@@ -35,14 +45,14 @@ const register = async (req, res) => {
     });
 
     res.status(201).json({
-      message: "Client crée",
+      message: "Client créé avec succès.",
       code_client: result.insertId,
       client: { nom, prenom, email },
     });
   } catch (error) {
-    console.error("erreur inscription", error.message);
+    console.error("Erreur inscription", error.message);
     res.status(500).json({
-      message: "Erreur creation client",
+      message: "Erreur serveur lors de la création du client.",
     });
   }
 };
@@ -86,8 +96,9 @@ const login = async (req, res) => {
     //On place le token dens un cookie HttpOnly
     res.cookie("token", token, {
       httpOnly: true,
-      secure: true, // ✅ CORRIGÉ : Doit être true pour HTTPS
-      sameSite: "lax", // 'lax' est un bon compromis. 'strict' peut poser problème avec les redirections.
+      secure: true,
+      sameSite: "none",
+      domain: ".mbaradji.dev-campus.fr",
       maxAge: expire * 1000,
     });
 
@@ -113,8 +124,9 @@ const login = async (req, res) => {
 const logout = (req, res) => {
   res.clearCookie("token", {
     httpOnly: true,
-    secure: true, // ✅ CORRIGÉ : Doit être true pour HTTPS
-    sameSite: "lax",
+    secure: true,
+    sameSite: "none",
+    domain: ".mbaradji.dev-campus.fr",
   });
   res.json({ message: "Déconnexion réussie" });
 };
@@ -124,7 +136,8 @@ const logout = (req, res) => {
 //Si le token est valide, on retourne les infos du client
 const getMe = async (req, res) => {
   try {
-    const clients = await findClientById(req.client.id);
+    // Utilise req.user.id injecté par le middleware
+    const clients = await findClientById(req.user.id);
 
     if (clients.length === 0) {
       return res.status(404).json({ message: "Client introuvable" });
@@ -139,16 +152,14 @@ const getMe = async (req, res) => {
         nom: client.nom,
         prenom: client.prenom,
         email: client.email,
-        telephone: client.telephone, // Assure-toi que cette colonne existe
-        points_fidelite: client.points_fidelite || 0, // Optionnel
-        date_inscription: client.date_inscription, // Optionnel
+        telephone: client.telephone,
+        points_fidelite: client.points_fidelite || 0,
+        date_inscription: client.date_inscription,
       },
     });
   } catch (error) {
-    console.error("Erreur /me:", error.message);
-    res
-      .status(500)
-      .json({ message: "Erreur lors de la vérification de session" });
+    console.error("[GET /client/me]", error.message);
+    res.status(500).json({ message: "Erreur serveur" });
   }
 };
 module.exports = { register, login, getMe, logout };

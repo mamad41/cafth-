@@ -15,10 +15,10 @@ const router = express.Router();
 
 router.get("/", getAll);
 
-//GET /api/articles/:id
-router.get("/:id", getById);
-
 //GET /api/articles/categorie/:categorie
 router.get("/categorie/:categorie", getByCategory);
+
+//GET /api/articles/:id
+router.get("/:id", getById);
 
 module.exports = router;

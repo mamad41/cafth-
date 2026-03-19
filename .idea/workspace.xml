@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="56b9aa25-8cc6-49d9-a6ca-f98f91d5e425" name="Changes" comment="mise a jour">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article/models/ArticleModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/article/models/ArticleModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article/routes/ArticleRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/article/routes/ArticleRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/controllers/ClientController.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/controllers/ClientController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/routes/ClientRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/routes/ClientRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +134,8 @@
       <workItem from="1773319582047" duration="1716000" />
       <workItem from="1773324318424" duration="20626000" />
       <workItem from="1773679304352" duration="5948000" />
-      <workItem from="1773753326649" duration="4092000" />
+      <workItem from="1773753326649" duration="10893000" />
+      <workItem from="1773846569691" duration="5130000" />
     </task>
     <task id="LOCAL-00001" summary="mise a jour">
       <option name="closed" value="true" />
@@ -217,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773768686553</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="mise a jour">
+      <option name="closed" value="true" />
+      <created>1773781469398</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1773781469398</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
